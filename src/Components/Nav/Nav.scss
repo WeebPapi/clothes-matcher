@@ -1,0 +1,17 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+.nav-bg {
+  background-color: $indigo-300;
+}
+a.navbar-brand {
+  background-color: #d6d6d6;
+  border-radius: 5px;
+  border: 3px solid #f9f9f9;
+  width: 50px;
+  box-sizing: content-box;
+
+  ::before > img {
+    width: 40x;
+  }
+}
