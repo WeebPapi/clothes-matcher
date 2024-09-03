@@ -11965,52 +11965,27 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.nav-bg {
-  background-color: transparent;
-  z-index: 20;
-  transition: all 0.5s ease-in;
-}
-
-.navbar-scrolled {
-  background-color: #4dd4ac;
-}
-.navbar-scrolled .navbar-logo > p {
-  color: #f9f9f9;
-}
-.navbar-scrolled .navbar-brand {
-  background-color: #d6d6d6;
-  border: 3px solid #f9f9f9;
-}
-
-.navbar-logo {
+.infocard {
+  width: 350px;
+  height: 650px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
-  width: -moz-max-content;
-  width: max-content;
 }
-.navbar-logo p {
-  margin: 0;
-  font-size: 24px;
+.infocard .infocard-text {
   font-family: "Open Sans", sans-serif;
+  width: 80%;
+  padding: 1rem 0;
+  text-align: left;
+}
+.infocard .infocard-text h2, .infocard .infocard-text .h2 {
+  color: #f9f9f9;
   font-weight: 600;
-  color: #242424;
-  transition: all 0.5s ease-in;
 }
-
-a.navbar-brand {
-  background-color: #575757;
-  border-radius: 5px;
-  border: 3px solid #242424;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-  transition: all 0.5s ease-in;
-}
-a.navbar-brand img {
-  width: 50px;
-  height: 50px;
-}/*# sourceMappingURL=Nav.css.map */
+.infocard .infocard-text p {
+  color: #495057;
+  font-weight: 500;
+}/*# sourceMappingURL=InfoCard.css.map */

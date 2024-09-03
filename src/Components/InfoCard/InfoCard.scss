@@ -1,0 +1,29 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+.infocard {
+  width: 350px;
+  height: 650px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .infocard-text {
+    font-family: "Open Sans", sans-serif;
+    width: 80%;
+    padding: 1rem 0;
+    text-align: left;
+
+    h2 {
+      color: #f9f9f9;
+      font-weight: 600;
+    }
+    p {
+      color: $gray-700;
+      font-weight: 500;
+    }
+  }
+}

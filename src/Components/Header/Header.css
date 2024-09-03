@@ -11965,52 +11965,28 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.nav-bg {
-  background-color: transparent;
-  z-index: 20;
-  transition: all 0.5s ease-in;
+.header-container {
+  background-image: url("../../assets/heroImage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  z-index: 1;
 }
 
-.navbar-scrolled {
-  background-color: #4dd4ac;
-}
-.navbar-scrolled .navbar-logo > p {
-  color: #f9f9f9;
-}
-.navbar-scrolled .navbar-brand {
-  background-color: #d6d6d6;
-  border: 3px solid #f9f9f9;
-}
-
-.navbar-logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: -moz-max-content;
-  width: max-content;
-}
-.navbar-logo p {
-  margin: 0;
-  font-size: 24px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  color: #242424;
-  transition: all 0.5s ease-in;
-}
-
-a.navbar-brand {
-  background-color: #575757;
-  border-radius: 5px;
-  border: 3px solid #242424;
-  width: 60px;
-  height: 60px;
+.header-card {
+  width: 100%;
+  text-align: left;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
-  transition: all 0.5s ease-in;
 }
-a.navbar-brand img {
-  width: 50px;
-  height: 50px;
-}/*# sourceMappingURL=Nav.css.map */
+.header-card h1, .header-card .h1 {
+  width: 100%;
+  max-width: 400px;
+}
+.header-card p {
+  font-size: 20px;
+  color: #051b11;
+}/*# sourceMappingURL=Header.css.map */

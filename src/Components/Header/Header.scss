@@ -1,0 +1,28 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+.header-container {
+  background-image: url("../../assets/heroImage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  z-index: 1;
+}
+.header-card {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    width: 100%;
+    max-width: 400px;
+  }
+  p {
+    font-size: 20px;
+    color: $green-900;
+  }
+}
