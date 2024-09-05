@@ -3,11 +3,11 @@ import { Nav, Footer } from "../"
 
 const Layout = () => {
   return (
-    <div>
+    <>
       <Nav />
       <Outlet />
       <Footer />
-    </div>
+    </>
   )
 }
 

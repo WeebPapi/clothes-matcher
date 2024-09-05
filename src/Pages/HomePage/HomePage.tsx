@@ -1,10 +1,11 @@
-import { Header } from "../../Components"
+import { About, Header } from "../../Components"
 import "./HomePage.css"
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="app-wrapper">
       <Header />
+      <About />
     </div>
   )
 }

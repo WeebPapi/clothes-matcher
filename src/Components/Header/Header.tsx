@@ -1,21 +1,41 @@
+import { useEffect, useRef } from "react"
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import "./Header.css"
-import { InfoCard } from "../"
-import { heroCard } from "../../assets"
 
 const Header = () => {
+  const headTextRef = useRef(null)
+
+  //Function to add animation to headtext upon scroll and to remove them when scrolled back up
+  const handleHeaderScroll: () => void = () => {
+    if (window.scrollY >= 76 && headTextRef.current) {
+      ;(headTextRef.current as HTMLElement).classList.add("header-scrolled")
+    } else if (window.scrollY < 76 && headTextRef.current) {
+      ;(headTextRef.current as HTMLElement).classList.remove("header-scrolled")
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleHeaderScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleHeaderScroll)
+    }
+  }, [])
   return (
     <div className="container-fluid header-container d-flex  justify-content-center align-items-center">
       <div className="header-card">
-        <InfoCard
-          title="Find Outfits"
-          subtitle="Analyze Your Skin Tone And Undertones To Find What Colors Fit You
-          Best, And Then Pick From A List Of Recommended Outfits In Those
-          Colors!"
-          image={heroCard}
-          textLocation="bottom"
-        />
-        <h1>Pick The Best Outfits For You, Based On Science!</h1>
+        <h1>
+          Pick The Best Outfits For You,{" "}
+          <span ref={headTextRef}>Based On Science!</span>
+        </h1>
+        <div className="header-buttons d-flex justify-content-start align-items-center">
+          <button type="button" className="btn btn-gray me-4">
+            How Does It Work?
+          </button>
+          <button type="button" className="btn btn-darkgray">
+            Try It Out!
+          </button>
+        </div>
       </div>
     </div>
   )

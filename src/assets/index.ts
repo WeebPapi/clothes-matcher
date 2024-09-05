@@ -1,4 +1,5 @@
 import heroImage from "./heroImage.jpg"
-import heroCard from "./heroCard.jpg"
+import takingSelfie from "./takingSelfie.jpg"
+import outfit1 from "./outfit1.jpg"
 
-export { heroImage, heroCard }
+export { heroImage, takingSelfie, outfit1 }

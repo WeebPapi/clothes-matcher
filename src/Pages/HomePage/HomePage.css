@@ -4,3 +4,9 @@
   text-align: center;
   background-color: #121212;
 }
+.app-wrapper {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}

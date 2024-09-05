@@ -2,14 +2,18 @@
 @import "../../../node_modules/bootstrap/scss/variables";
 
 .infocard {
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   height: 650px;
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: 13px 17px 15px -3px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 1rem;
+  transition: all 0.5s ease-in;
 
   .infocard-text {
     font-family: "Open Sans", sans-serif;
@@ -22,7 +26,10 @@
       font-weight: 600;
     }
     p {
-      color: $gray-700;
+      color: #242424;
+      background-color: #f9f9f9;
+      padding: 1rem 2rem;
+      border-radius: 50px;
       font-weight: 500;
     }
   }

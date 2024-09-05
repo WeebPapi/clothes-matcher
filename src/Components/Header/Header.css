@@ -11966,12 +11966,10 @@ textarea.form-control-lg {
   }
 }
 .header-container {
-  background-image: url("../../assets/heroImage.jpg");
+  background-image: url("../../assets/artist-props-photography.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  position: absolute;
   height: 100vh;
-  top: 0;
   z-index: 1;
 }
 
@@ -11979,14 +11977,55 @@ textarea.form-control-lg {
   width: 100%;
   text-align: left;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .header-card h1, .header-card .h1 {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
+}
+.header-card h1 span.header-scrolled, .header-card .h1 span.header-scrolled {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.header-card h1 span::before, .header-card .h1 span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  background-color: hsla(341, 97%, 59%, 0.75);
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-in-out;
+}
+.header-card h1 span.header-scrolled::before, .header-card .h1 span.header-scrolled::before {
+  width: 100% !important;
+  transform: scaleX(1);
+  transform-origin: center left;
 }
 .header-card p {
   font-size: 20px;
   color: #051b11;
+}
+.header-card .header-buttons {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 2rem;
+}
+.header-card .header-buttons .btn-gray {
+  background-color: #f8f9fa;
+}
+.header-card .header-buttons .btn-gray:hover {
+  background-color: #e9ecef;
+}
+.header-card .header-buttons .btn-darkgray {
+  background-color: #6c757d;
+  color: white;
+}
+.header-card .header-buttons .btn-darkgray:hover {
+  background-color: #495057;
 }/*# sourceMappingURL=Header.css.map */

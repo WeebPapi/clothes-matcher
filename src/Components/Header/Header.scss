@@ -2,27 +2,76 @@
 @import "../../../node_modules/bootstrap/scss/variables";
 
 .header-container {
-  background-image: url("../../assets/heroImage.jpg");
+  background-image: url("../../assets/artist-props-photography.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  position: absolute;
   height: 100vh;
-  top: 0;
   z-index: 1;
 }
 .header-card {
   width: 100%;
   text-align: left;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   h1 {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
+
+    span.header-scrolled {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+    }
+
+    span::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      // left: -0.25em;
+      // right: -0.25em;
+      background-color: hsla(341, 97%, 59%, 0.75);
+      transform-origin: center right;
+      transform: scaleX(0);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    span.header-scrolled::before {
+      width: 100% !important;
+      transform: scaleX(1);
+      transform-origin: center left;
+    }
   }
   p {
     font-size: 20px;
     color: $green-900;
+  }
+
+  .header-buttons {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 2rem;
+
+    .btn-gray {
+      background-color: $gray-100;
+
+      &:hover {
+        background-color: $gray-200;
+      }
+    }
+
+    .btn-darkgray {
+      background-color: $gray-600;
+      color: white;
+
+      &:hover {
+        background-color: $gray-700;
+      }
+    }
   }
 }
